@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.dao.StudentDao">
+    <select id="selectById" parameterType="com.ssm.entity.Student" resultType="com.ssm.entity.Student">
+        select * from t_student where id=#{id}
+    </select>
+
+    <insert id="add" parameterType="com.ssm.entity.Student" >
+        insert into t_student (name,sex,address)values(#{name},#{sex},#{address})
+    </insert>
+
+    <update id="update" parameterType="com.ssm.entity.Student" >
+        update t_student set name=#{name} where id=#{id}
+    </update>
+
+    <delete id="delete" parameterType="com.ssm.entity.Student" >
+        delete from t_student where name=#{name}
+    </delete>
+
+</mapper>
+

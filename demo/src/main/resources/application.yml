@@ -1,0 +1,15 @@
+#sqlserver数据库
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1434;database=test
+    username: sa
+    password: 1qw2!QW@
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+#mybatisy映射文件
+mybatis:
+  mapper-locations: classpath:mapper/StudentMapper.xml
+  type-aliases-package: com.ssm.entity
+
+
+
